@@ -26,8 +26,7 @@
 
 namespace Connections_Directory\Extension;
 
-use Connections_Directory\Extension\Thumbnail_Shortcodes\Shortcode\Thumbnail;
-use Connections_Directory\Extension\Thumbnail_Shortcodes\Shortcode\Thumbnail_Responsive;
+use Connections_Directory\Extension\Thumbnail_Shortcodes\Shortcode;
 
 final class Thumbnail_Shortcodes {
 
@@ -77,8 +76,8 @@ final class Thumbnail_Shortcodes {
 
 			$self->includeDependencies();
 
-			Thumbnail::add();
-			Thumbnail_Responsive::add();
+			Shortcode\Thumbnail::add();
+			Shortcode\Thumbnail_Responsive::add();
 
 			self::$instance = $self;
 		}
